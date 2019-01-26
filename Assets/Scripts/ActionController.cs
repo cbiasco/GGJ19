@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ActionController : MonoBehaviour
 {
-    private const string BUTTON = "Action";
+    private const string USE_BUTTON = "Action";
+    private const string GRAB_BUTTON = "Grab";
 
     private bool m_buttonPressed = false;
     private float m_nearestDistance = float.PositiveInfinity;
@@ -16,10 +17,10 @@ public class ActionController : MonoBehaviour
 
     void PerformActionOnActionable(Actionable actionable)
     {
-        // If we don't have anything, then don't pass anything in
+        // If we don't have anything, then we can't perform an action
         if (heldItems.Count == 0)
         {
-            actionable.PerformAction(this);
+            return;
         }
         // Pass the most appropriate thing that we have in
         else
@@ -44,18 +45,29 @@ public class ActionController : MonoBehaviour
             }
         }
     }
+    void PerformSoloAction(Actionable actionable)
+    {
+        actionable.PerformAction(this);
+    }
 
     void Update()
     {
-        if (Input.GetButtonDown(BUTTON))
+        if (Input.GetButtonDown(USE_BUTTON))
         {
             if (m_nearestActionable)
             {
                 PerformActionOnActionable(m_nearestActionable);
             }
-            else if (activeItem)
+        }
+        else if (Input.GetButtonDown(GRAB_BUTTON))
+        {
+            if (activeItem)
             {
-                activeItem.PerformAction(this);
+                PerformSoloAction(activeItem);
+            }
+            else if (m_nearestActionable)
+            {
+                PerformSoloAction(m_nearestActionable);
             }
         }
 
