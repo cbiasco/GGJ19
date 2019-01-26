@@ -1,18 +1,19 @@
 fileFormatVersion: 2
-guid: c12ddead5c56ffc4e804c2eee2c9d1ee
+guid: 4ef585904b64dce40946bd3d62723bf6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: HouseFloor_0
-    21300002: HouseFloor_1
-    21300004: HouseFloor_2
-    21300006: HouseFloor_3
-    21300008: HouseFloor_4
-    21300010: HouseFloor_5
-    21300012: HouseFloor_6
-    21300014: HouseFloor_7
-    21300016: HouseFloor_8
-    21300018: HouseFloor_9
-    21300020: HouseFloor_10
+    21300000: Floor Home_0
+    21300002: Floor Home_1
+    21300004: Floor Home_2
+    21300006: Floor Home_3
+    21300008: Floor Home_4
+    21300010: Floor Home_5
+    21300012: Floor Home_6
+    21300014: Floor Home_7
+    21300016: Floor Home_8
+    21300018: Floor Home_9
+    21300020: Floor Home_10
+    21300022: Floor Home_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -117,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HouseFloor_0
+      name: Floor Home_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,19 +126,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 067c6212265ab8e4b911176ef799f442
+      spriteID: 215bf8ab006e49f40b8c69840497729f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_1
+      name: Floor Home_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,19 +146,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1285207d83e46c546b42589bd2413860
+      spriteID: fa236896305b86c4c9a09dc2f91f7d0e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_2
+      name: Floor Home_2
       rect:
         serializedVersion: 2
         x: 128
@@ -165,19 +166,39 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca052ba61da1f3f48bc8f2b28e32d5a1
+      spriteID: aca521fb7f0fc994789f444a5ad51585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_3
+      name: Floor Home_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0399a1c197ab74189b275f4a169b42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor Home_4
       rect:
         serializedVersion: 2
         x: 0
@@ -185,19 +206,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc5d518ef0f78384f843dcf90ca2c425
+      spriteID: 5fe7c5b80056fb244b76752ba133e478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_4
+      name: Floor Home_5
       rect:
         serializedVersion: 2
         x: 64
@@ -205,19 +226,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6374e2325d98eff49b28e017f1e48450
+      spriteID: 42a657fce91d12648b9c04127837a7c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_5
+      name: Floor Home_6
       rect:
         serializedVersion: 2
         x: 128
@@ -225,19 +246,39 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9420188d776e451418a4573cf6ec5f9b
+      spriteID: a9c4af0620dfa3a41a2dc5f673d6c1b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_6
+      name: Floor Home_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac3d402e12f49149adb8f1e1413a15e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor Home_8
       rect:
         serializedVersion: 2
         x: 0
@@ -245,19 +286,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6be50a06e53ab5f41852d09a05ca3a65
+      spriteID: d54296ac2a6b58a45926035bd91cde32
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_7
+      name: Floor Home_9
       rect:
         serializedVersion: 2
         x: 64
@@ -265,19 +306,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db84cff868d034b49b5c3f75aaa3e9d0
+      spriteID: 8d2b8915376931648bae15804265535f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_8
+      name: Floor Home_10
       rect:
         serializedVersion: 2
         x: 128
@@ -285,53 +326,33 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d38b219d2e7632449f60faccc4db89f
+      spriteID: 6360055c21e594644a2083a6615e8066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HouseFloor_9
+      name: Floor Home_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 192
+        y: 64
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b9434dc48cbf544b083e6ab5f1e2a1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HouseFloor_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae57cbfbd3baaeb4e9b092dc9e822878
+      spriteID: e6d1a5ae4ba5c9c4e8368bee4a720865
       vertices: []
       indices: 
       edges: []
@@ -339,7 +360,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2b2cdc236db438c46b68bb58d8e36d9b
+    spriteID: a86d697bb8a199849ae6a2a5a58ed1e7
     vertices: []
     indices: 
     edges: []
