@@ -5,13 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PickupDrop Action", menuName = "Actions/PickupDrop Action")]
 public class PickupDropAction : Action
 {
-    private bool held = false;
-
     public override void Run(Actionable actionable, Actionable item, ActionController actionController)
     {
-        if (!held)
+        if (actionController.activeItem != actionable)
         {
-            held = true;
             actionable.transform.parent = actionController.transform;
             actionable.transform.localPosition = Vector3.zero;
             actionable.transform.localRotation = Quaternion.identity;
@@ -21,7 +18,6 @@ public class PickupDropAction : Action
         }
         else
         {
-            held = false;
             actionable.transform.parent = null;
 
             actionController.activeItem = null;
