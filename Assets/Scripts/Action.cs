@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Action : ScriptableObject
 {
-    public abstract void StartupAction();
+    public abstract void Startup(Actionable actionable);
 
-    public abstract void RunAction();
+    public abstract void Run(Actionable actionable, Actionable item, ActionController actionController);
 }

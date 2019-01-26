@@ -7,23 +7,34 @@ public class ActionController : MonoBehaviour
 {
     private const string BUTTON = "Action";
 
-    private Actionable m_activeItem;
-    private List<Actionable> m_heldItems;
-
     private bool m_buttonPressed = false;
     private float m_nearestDistance = float.PositiveInfinity;
     private Actionable m_nearestActionable;
 
+    public Actionable activeItem;
+    public HashSet<Actionable> heldItems = new HashSet<Actionable>();
+
     void PerformActionOnActionable(Actionable actionable)
     {
-        foreach (Actionable item in m_heldItems)
+        // If we don't have anything, then don't pass anything in
+        if (heldItems.Count == 0)
         {
-            HashSet<string> matchingIds = item.GetAttributes();
-            matchingIds.IntersectWith(actionable.GetAttributes());
-            if (matchingIds.Count > 0)
+            actionable.PerformAction(this);
+        }
+        // Pass the most appropriate thing that we have in
+        else
+        {
+            foreach (Actionable item in heldItems)
             {
-                actionable.PerformAction(matchingIds, item);
+                HashSet<string> matchingAttribs = item.GetAttributes();
+                matchingAttribs.IntersectWith(actionable.GetAttributes());
+                if (matchingAttribs.Count > 0)
+                {
+                    actionable.PerformAction(matchingAttribs, item, this);
+                }
             }
+
+            // TODO: "Error" noise since no actions were applicable?
         }
     }
 
@@ -35,9 +46,9 @@ public class ActionController : MonoBehaviour
             {
                 PerformActionOnActionable(m_nearestActionable);
             }
-            else if (m_activeItem)
+            else if (activeItem)
             {
-                m_activeItem.PerformAction();
+                activeItem.PerformAction(this);
             }
         }
 
@@ -48,7 +59,7 @@ public class ActionController : MonoBehaviour
     void OnTriggerStay2D(Collider2D collider)
     {
         Actionable a = collider.GetComponent<Actionable>();
-        if (a)
+        if (a && !heldItems.Contains(a))
         {
             float distance = Vector2.Distance(transform.position, a.transform.position);
             if (distance < m_nearestDistance)
