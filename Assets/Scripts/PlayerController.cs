@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         m_rigidBody.velocity = new Vector2(hor, vert) * speed;
 
         // Look direction
-        if (Input.mousePresent)
+        if (Input.GetJoystickNames().Length <= 0)
         {
             Vector3 playerToCamera = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             playerToCamera.z = 0;
@@ -34,7 +34,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.LookRotation(new Vector3(Input.GetAxis("LookX"), Input.GetAxis("LookY"), 0f).normalized, Vector3.forward);
+            Vector3 lookDir = new Vector3(Input.GetAxis("LookX"), Input.GetAxis("LookY"), 0f);
+            if (lookDir.sqrMagnitude > .05)
+            {
+                transform.up = lookDir.normalized;
+            }
         }
     }
 }

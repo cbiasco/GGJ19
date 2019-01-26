@@ -5,4 +5,5 @@ using UnityEngine;
 public class ActionSet : ScriptableObject
 {
     public readonly string[] attributes;
+    public readonly Action[] actions;
 }
