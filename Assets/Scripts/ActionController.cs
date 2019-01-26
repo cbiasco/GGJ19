@@ -40,11 +40,14 @@ public class ActionController : MonoBehaviour
                 m_activeItem.PerformAction();
             }
         }
+
+        m_nearestDistance = float.PositiveInfinity;
+        m_nearestActionable = null;
     }
 
-    void OnCollisionStay2D(Collision collision)
+    void OnTriggerStay2D(Collider2D collider)
     {
-        Actionable a = collision.gameObject.GetComponent<Actionable>();
+        Actionable a = collider.GetComponent<Actionable>();
         if (a)
         {
             float distance = Vector2.Distance(transform.position, a.transform.position);

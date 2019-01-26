@@ -19,9 +19,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Movement
         float vert = Input.GetAxis("Vertical");
         float hor  = Input.GetAxis("Horizontal");
 
         m_rigidBody.velocity = new Vector2(hor, vert) * speed;
+
+        // Look direction
+        if (Input.mousePresent)
+        {
+            Vector3 playerToCamera = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            playerToCamera.z = 0;
+            transform.up = playerToCamera;
+        }
+        else
+        {
+            transform.rotation = Quaternion.LookRotation(new Vector3(Input.GetAxis("LookX"), Input.GetAxis("LookY"), 0f).normalized, Vector3.forward);
+        }
     }
 }
