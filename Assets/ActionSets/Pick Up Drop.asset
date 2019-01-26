@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79968ad13eec9b9408d11d76cd6f8b79, type: 3}
-  m_Name: Pick Up
+  m_Name: Pick Up Drop
   m_EditorClassIdentifier: 
   attributes: []
   actions:
