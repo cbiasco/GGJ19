@@ -24,17 +24,24 @@ public class ActionController : MonoBehaviour
         // Pass the most appropriate thing that we have in
         else
         {
+            Actionable matchedItem = null;
+            HashSet<string> matchingAttribs = null;
             foreach (Actionable item in heldItems)
             {
-                HashSet<string> matchingAttribs = item.GetAttributes();
+                //Debug.Log("Trying " + item.name + " with " + actionable.name + "...");
+                matchingAttribs = item.GetAttributes();
                 matchingAttribs.IntersectWith(actionable.GetAttributes());
                 if (matchingAttribs.Count > 0)
                 {
-                    actionable.PerformAction(matchingAttribs, item, this);
+                    matchedItem = item;
+                    break;
                 }
             }
 
-            // TODO: "Error" noise since no actions were applicable?
+            if (matchedItem)
+            {
+                actionable.PerformAction(matchingAttribs, matchedItem, this);
+            }
         }
     }
 

@@ -17,6 +17,7 @@ public class Actionable : MonoBehaviour
             attributes.UnionWith(actionSet.attributes);
         }
 
+        attributes.RemoveWhere((x) => { return x.Length == 0; });
         return attributes;
     }
 
@@ -45,9 +46,9 @@ public class Actionable : MonoBehaviour
         foreach (ActionSet actionSet in actionSets)
         {
             Debug.Assert(actionSet != null);
-            HashSet<string> intersection = matchingAttribs;
+            HashSet<string> intersection = new HashSet<string>(matchingAttribs);
             intersection.IntersectWith(actionSet.attributes);
-            if (intersection == matchingAttribs)
+            if (intersection.SetEquals(matchingAttribs))
             {
                 actionSet.Run(this, item, actionController);
                 return;
