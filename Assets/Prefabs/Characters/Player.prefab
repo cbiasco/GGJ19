@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feet: {fileID: 0}
-  speed: 10
+  speed: 5
 --- !u!50 &6107734847089572715
 Rigidbody2D:
   serializedVersion: 4
@@ -201,6 +201,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6107734847089572713}
     m_Modifications:
+    - target: {fileID: 271253605317993288, guid: 5e3d0446af5c0e047b733a3d7a481f2f,
+        type: 3}
+      propertyPath: m_Name
+      value: Feet
+      objectReference: {fileID: 0}
     - target: {fileID: 271253605317993295, guid: 5e3d0446af5c0e047b733a3d7a481f2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,11 +260,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 271253605317993288, guid: 5e3d0446af5c0e047b733a3d7a481f2f,
-        type: 3}
-      propertyPath: m_Name
-      value: Feet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e3d0446af5c0e047b733a3d7a481f2f, type: 3}
