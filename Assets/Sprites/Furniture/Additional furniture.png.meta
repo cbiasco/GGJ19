@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 3268e8573c39e024d8fba6881bee8260
+guid: 83115a7a81d28ac49beff3fa73b13efe
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Dishwasher animation part 1_0
-    21300002: Dishwasher animation part 1_1
-    21300004: Dishwasher animation part 1_2
-    21300006: Dishwasher animation part 1_3
-    21300008: Dishwasher animation part 1_4
-    21300010: Dishwasher animation part 1_5
+    21300000: Additional furniture_0
+    21300002: Additional furniture_1
+    21300004: Additional furniture_2
+    21300006: Additional furniture_3
+    21300008: Additional furniture_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -112,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dishwasher animation part 1_0
+      name: Additional furniture_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,13 +125,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f97001f1e84c3842a61500e870737a7
+      spriteID: 23f92e2ac327bd642a58ea7de46b3c6b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dishwasher animation part 1_1
+      name: Additional furniture_1
       rect:
         serializedVersion: 2
         x: 64
@@ -146,13 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 707c45315727e35409b5f7635aa339d3
+      spriteID: dbe0103cf74f7c640b0e41a689cce698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dishwasher animation part 1_2
+      name: Additional furniture_2
       rect:
         serializedVersion: 2
         x: 0
@@ -166,13 +165,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a35d86bfbb12d5c498b77ce4ed0f309c
+      spriteID: e17aa6ee239614740b860b27c0ea812a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dishwasher animation part 1_3
+      name: Additional furniture_3
       rect:
         serializedVersion: 2
         x: 64
@@ -186,13 +185,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f577bbfb0be5d9141b38015a1d9b49b7
+      spriteID: e04dccb5a822c394d8d27b5e2cda4099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dishwasher animation part 1_4
+      name: Additional furniture_4
       rect:
         serializedVersion: 2
         x: 0
@@ -206,27 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 956baf70d87923146ba05cce2951a1ed
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dishwasher animation part 1_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46dc97202fc9e0e49b9c9a7b0e52aed9
+      spriteID: a770be3e1ef75e047ac2556d81b2b6b9
       vertices: []
       indices: 
       edges: []
@@ -234,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9d7ec03ee0a742c45acf54ae86921402
+    spriteID: ff543e10b16db934ba5c2eb8f8e7e75c
     vertices: []
     indices: 
     edges: []
