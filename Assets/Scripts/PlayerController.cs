@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.inputBlocked)
+        {
+            return;
+        }
+
         // Determine what should be controlling the look direction
         m_controlledByMouse = m_controlledByMouse || Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2);
         Vector3 lookDir = new Vector3(Input.GetAxis("LookX"), Input.GetAxis("LookY"), 0f);

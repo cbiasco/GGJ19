@@ -8,6 +8,9 @@ public class NotesUI : MonoBehaviour
     public GameObject notesIcon;
     public GameObject noteCard;
 
+    private Vector2 iconStart;
+    private Vector2 cardStart;
+
     private bool notesOpen = false;
     
     // Start is called before the first frame update
@@ -15,6 +18,9 @@ public class NotesUI : MonoBehaviour
     {
         notesIcon.SetActive(true);
         noteCard.SetActive(false);
+
+        iconStart = notesIcon.transform.position;
+        cardStart = noteCard.transform.position;
     }
 
     // Update is called once per frame
@@ -23,12 +29,10 @@ public class NotesUI : MonoBehaviour
         if (!notesOpen && Input.GetButtonDown("Menu"))
         {
             OpenNoteCard();
-            notesOpen = true;
         }
         else if (notesOpen && Input.GetButtonDown("Menu"))
         {
             CloseNoteCard();
-            notesOpen = false;
         }
     }
 
@@ -36,11 +40,13 @@ public class NotesUI : MonoBehaviour
     {
         noteCard.SetActive(false);
         notesIcon.SetActive(true);
+        notesOpen = false;
     }
 
     public void OpenNoteCard()
     {
         noteCard.SetActive(true);
         notesIcon.SetActive(false);
+        notesOpen = true;
     }
 }

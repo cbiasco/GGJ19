@@ -52,6 +52,11 @@ public class ActionController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.inputBlocked)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown(USE_BUTTON))
         {
             if (m_nearestActionable)
