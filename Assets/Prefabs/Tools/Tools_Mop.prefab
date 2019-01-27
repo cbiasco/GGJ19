@@ -181,3 +181,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 914cb5067acb1a447bc9a39a7572d778, type: 2}
   - {fileID: 11400000, guid: 367ade2141203434898e920daa931774, type: 2}
   - {fileID: 11400000, guid: a32ae43436ab96d489babadaf7766c38, type: 2}
+  clip: {fileID: 8300000, guid: 9bf36dfc0dfb99e48a9e891b32e1bb32, type: 3}

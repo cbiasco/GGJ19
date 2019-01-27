@@ -8,6 +8,9 @@ public class Actionable : MonoBehaviour
     [SerializeField]
     private ActionSet[] actionSets;
 
+    public AudioClip clip;
+    
+
     public HashSet<string> GetAttributes()
     {
         HashSet<string> attributes = new HashSet<string>();
@@ -23,11 +26,13 @@ public class Actionable : MonoBehaviour
 
     public void PerformAction(ActionController actionController)
     {
+        actionController.setSource(clip);
         PerformAction(new HashSet<string>(), null, actionController);
     }
 
     public void PerformAction(HashSet<string> matchingAttribs, Actionable item, ActionController actionController)
     {
+        
         // If we don't have an item, then we won't have any attributes to match either
         if (item == null)
         {
@@ -51,6 +56,7 @@ public class Actionable : MonoBehaviour
             if (intersection.SetEquals(matchingAttribs))
             {
                 actionSet.Run(this, item, actionController);
+                
                 return;
             }
         }
@@ -64,4 +70,5 @@ public class Actionable : MonoBehaviour
             actionSet.Startup(this);
         }
     }
+
 }

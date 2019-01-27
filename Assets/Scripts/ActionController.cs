@@ -15,8 +15,13 @@ public class ActionController : MonoBehaviour
     public Actionable activeItem;
     public HashSet<Actionable> heldItems = new HashSet<Actionable>();
 
+    public AudioSource source;
+    public AudioClip clip;
+  
+
     void PerformActionOnActionable(Actionable actionable)
     {
+        playClip();
         // If we don't have anything, then we can't perform an action
         if (heldItems.Count == 0)
         {
@@ -27,6 +32,7 @@ public class ActionController : MonoBehaviour
         {
             Actionable matchedItem = null;
             HashSet<string> matchingAttribs = null;
+            
             foreach (Actionable item in heldItems)
             {
                 //Debug.Log("Trying " + item.name + " with " + actionable.name + "...");
@@ -59,13 +65,16 @@ public class ActionController : MonoBehaviour
 
         if (Input.GetButtonDown(USE_BUTTON))
         {
+            
             if (m_nearestActionable)
             {
                 PerformActionOnActionable(m_nearestActionable);
+                
             }
         }
         else if (Input.GetButtonDown(GRAB_BUTTON))
         {
+            
             if (activeItem)
             {
                 PerformSoloAction(activeItem);
@@ -93,4 +102,15 @@ public class ActionController : MonoBehaviour
             }
         }
     }
+    public void setSource(AudioClip inputClip)
+    {
+        clip = inputClip;
+        source.clip = inputClip;
+    }
+    public void playClip()
+    {
+        source.Play();
+    }
+
+
 }
