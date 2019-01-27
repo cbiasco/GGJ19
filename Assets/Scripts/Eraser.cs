@@ -14,14 +14,17 @@ public class Eraser : MonoBehaviour
         map = GetComponent<Tilemap>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Action")) && eraseable)
+        if (Input.GetButton("Action") && eraseable)
         {
             var tilePos = map.WorldToCell(player.transform.position);
-            if (map.GetTile(tilePos) !=null)
+            if (map.HasTile(tilePos))
+            {
+                Sprite s = map.GetSprite(tilePos);
+                Debug.Log(s.name);
                 map.SetTile(tilePos, null);
+            }
         }
     }
 
