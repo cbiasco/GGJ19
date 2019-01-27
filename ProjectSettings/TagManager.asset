@@ -41,6 +41,9 @@ TagManager:
   - name: Reference
     uniqueID: 741176915
     locked: 0
+  - name: Spawn
+    uniqueID: 3063407631
+    locked: 0
   - name: House
     uniqueID: 3154018687
     locked: 0
